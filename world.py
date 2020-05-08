@@ -2,6 +2,8 @@ from room import Room
 import random
 import math
 
+# if player is in starting from
+#     while player.
 class World:
     def __init__(self):
         self.starting_room = None

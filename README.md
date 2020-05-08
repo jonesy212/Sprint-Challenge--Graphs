@@ -2,6 +2,7 @@
 
 You are provided with a pre-generated graph consisting of 500 rooms. You are responsible for filling `traversal_path` with directions that, when walked in order, will visit every room on the map at least once.
 
+
 Open `adv.py`. There are four parts to the provided code:
 
 * World generation code. Do not modify this!
@@ -9,6 +10,13 @@ Open `adv.py`. There are four parts to the provided code:
 * Test code. Run the tests by typing `python3 adv.py` in your terminal.
 * REPL code. You can uncomment this and run `python3 adv.py` to walk around the map.
 
+
+if player starts in starting room
+  see what direction he can go,
+    set an error if can't
+    go a certain direction
+  search to find 
+  a question Mark
 
 You may find the commands `player.current_room.id`, `player.current_room.get_exits()` and `player.travel(direction)` useful.
 
@@ -36,6 +44,8 @@ You know you are done when you have exactly 500 entries (0-499) in your graph an
 There are a few smaller graphs in the file which you can test your traversal method on before committing to the large graph. You may find these easier to debug.
 
 Start by writing an algorithm that picks a random unexplored direction from the player's current room, travels and logs that direction, then loops. This should cause your player to walk a depth-first traversal. When you reach a dead-end (i.e. a room with no unexplored paths), walk back to the nearest room that does contain an unexplored path.
+
+
 
 You can find the path to the shortest unexplored room by using a breadth-first search for a room with a `'?'` for an exit. If you use the `bfs` code from the homework, you will need to make a few modifications.
 
